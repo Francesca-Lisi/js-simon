@@ -19,32 +19,36 @@
 </head>
 <body class="bg-cream">
   <div class="container py-5">
-    <h1 class="text-center my-4">Memory Game</h1>
+    <h1 class=" my-4">Memory Game</h1>
     <div class="row border-salmon">
       <div class="col col-3 bg-primary py-4">
         <!-- IMMAGINE -->
       </div>
       <div class="col col-9 bg-salmon py-5 ">
-        <p class="text-center fs-3 ">Hai 10 secondi per memorizzare i seguenti numeri:</p>  <!-- al termine del countdown diventerà: Scrivi i numeri memorizzati -->
+        <p id="rules" class="text-center fs-3 ">Hai 10 secondi per memorizzare i seguenti numeri:</p>  <!-- al termine del countdown diventerà: Scrivi i numeri memorizzati -->
           <!-- CONTO ALLA ROVESCIA -->
-        <p id="counter" class="text-center fs-1 my-4">10</p>
+        <p id="countdown" class="text-center fs-1 my-4">10</p>
 
           <!-- NUMERI RANDOM -->
         <p id="numeri-random" class="text-center fs-2 fw-bold">12345</p>
 
 
           <!-- Form Numeri -->
-        <form action="#" class="d-flex my-5 d-none">
+        <form id="numbers-field" action="#" class="d-flex d-none mb-4">
           <input class="form-control mx-4"  type="number"/>
           <input class="form-control mx-4"  type="number"/>
           <input class="form-control mx-4"  type="number"/>
           <input class="form-control mx-4"  type="number"/>
           <input class="form-control mx-4"  type="number"/>
         </form>
+        <div id="btn" class="d-flex d-none">
+         <button id="btn-start" type="submit" class="btn bg-light mx-auto ">Calcola</button> 
+        </div>
+        
       </div>
     </div>
 
-    <div class="row bg-salmon-dark my-3 py-3">
+    <div id="result" class="row bg-salmon-dark my-3 py-3 d-none">
       <h2 class='text-center text-light'>HAI VINTO!</h2>
         <p class='text-center fs-4 text-light'>Numeri indovinati: </p>
     </div>

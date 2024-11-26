@@ -7,6 +7,7 @@
   <!-- file CSS -->
   <link rel="stylesheet" href="style.css">
   <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous">
 
 
   <!-- Google Font  -->
@@ -16,8 +17,38 @@
 
   <title>Simon Says</title>
 </head>
-<body>
-  
+<body class="bg-cream">
+  <div class="container py-5">
+    <h1 class="text-center my-4">Memory Game</h1>
+    <div class="row border-salmon">
+      <div class="col col-3 bg-primary py-4">
+        <!-- IMMAGINE -->
+      </div>
+      <div class="col col-9 bg-salmon py-5 ">
+        <p class="text-center fs-3 ">Hai 10 secondi per memorizzare i seguenti numeri:</p>  <!-- al termine del countdown diventerà: Scrivi i numeri memorizzati -->
+          <!-- CONTO ALLA ROVESCIA -->
+        <p id="counter" class="text-center fs-1 my-4">10</p>
+
+          <!-- NUMERI RANDOM -->
+        <p id="numeri-random" class="text-center fs-2 fw-bold">12345</p>
+
+
+          <!-- Form Numeri -->
+        <form action="#" class="d-flex my-5 d-none">
+          <input class="form-control mx-4"  type="number"/>
+          <input class="form-control mx-4"  type="number"/>
+          <input class="form-control mx-4"  type="number"/>
+          <input class="form-control mx-4"  type="number"/>
+          <input class="form-control mx-4"  type="number"/>
+        </form>
+      </div>
+    </div>
+
+    <div class="row bg-salmon-dark my-3 py-3">
+      <h2 class='text-center text-light'>HAI VINTO!</h2>
+        <p class='text-center fs-4 text-light'>Numeri indovinati: </p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

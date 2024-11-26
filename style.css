@@ -1,0 +1,29 @@
+*{
+  font-family: Sour Gummy;
+}
+
+h1{
+  font-size: 100px;
+  font-weight: 900;
+}
+
+div.row.border-salmon{
+  max-height: 315px;
+}
+
+/* Colori */
+.bg-salmon{
+  background-color: #FFDBBB;
+}
+
+.bg-salmon-dark{
+  background-color: #FDA159;
+}
+
+.bg-cream{
+  background-color: #f7e6b3;
+}
+
+.border-salmon{
+  border: 3px solid #FDA159;
+}

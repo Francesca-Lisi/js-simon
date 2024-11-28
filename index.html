@@ -24,7 +24,7 @@
       <div class="col col-3 bg-primary py-4">
         <!-- IMMAGINE -->
       </div>
-      <div class="col col-9 bg-salmon py-5 ">
+      <div class="col col-9 bg-salmon pt-5 ">
         <p id="rules" class="text-center fs-3 ">Hai 10 secondi per memorizzare i seguenti numeri:</p>  <!-- al termine del countdown diventerà: Scrivi i numeri memorizzati -->
           <!-- CONTO ALLA ROVESCIA -->
         <p id="countdown" class="text-center fs-1 my-4">10</p>
@@ -34,15 +34,20 @@
 
 
           <!-- Form Numeri -->
-        <form id="numbers-field" action="#" class="d-flex d-none mb-4">
-          <input class="form-control mx-4"  type="number"/>
-          <input class="form-control mx-4"  type="number"/>
-          <input class="form-control mx-4"  type="number"/>
-          <input class="form-control mx-4"  type="number"/>
-          <input class="form-control mx-4"  type="number"/>
-        </form>
-        <div id="btn" class="d-flex d-none">
-         <button id="btn-start" type="submit" class="btn bg-light mx-auto ">Calcola</button> 
+        <form id="numbers-field" action="#" class="d-none mb-4">
+          <div class="d-flex">
+            <input class="form-control mx-4"  type="number" min="1" max="50"  required/>
+            <input class="form-control mx-4"  type="number" min="1" max="50"  required/>
+            <input class="form-control mx-4"  type="number" min="1" max="50"  required/>
+            <input class="form-control mx-4"  type="number" min="1" max="50"  required/>
+            <input class="form-control mx-4"  type="number" min="1" max="50" required/> 
+          </div>
+          
+          <div class="d-flex pt-5">
+            <button  type="submit" class="btn bg-light mx-auto d-inline-block ">Calcola</button>   
+          </div>
+          
+        </form>        
         </div>
         
       </div>

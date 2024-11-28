@@ -9,13 +9,17 @@ da indovinare sono stati individuati.*/
 
 // Richiamo elementi DOM
 const countdown = document.getElementById('countdown');
-let seconds = 10;
 const numRandom = document.getElementById('numeri-random');
-const numField = document.getElementById('numbers-field');
 const rules = document.getElementById('rules');
 const result =document.getElementById('result');
-const btn = document.getElementById('btn');
-const btnStart = document.getElementById('btn-start');
+const form = document.getElementById('numbers-field')
+const imputFields = document.querySelectorAll('imput')
+let seconds = 10;
+const min = 1;
+const max = 50;
+const totalNumbers = 5;
+
+
 
 
 //Creo il Countdown
@@ -29,11 +33,61 @@ const intervalId = setInterval(function(){
     countdown.innerHTML = 'Via!';
     rules.innerHTML = 'Inserisci i numeri memorizzati';
     numRandom.classList.add('d-none');
-    numField.classList.remove('d-none');
-    btn.classList.remove('d-none');
+    form.classList.remove('d-none');
   }
   seconds--;
 
-},500)
+},200)
 
 //Creo i numeri random
+
+const randomNumbers = [];
+
+while(randomNumbers.length < 5){
+  const randomNumber = Math.ceil(Math.random() * 50);
+  if(!randomNumbers.includes(randomNumber)){
+    randomNumbers.push(randomNumber)
+  }
+}
+
+numRandom.innerHTML = randomNumbers.join(' - ')
+
+
+//creo una funzione che mi restituisca un array con i valori inseriti
+
+
+
+const confirm = e => {
+  e.preventDefault();
+
+  const playerNumbers = [];
+  for (let i = 0; i < imputFields.length ; i++){
+    const field = inputFields[i];
+    const value = parseInt(field.value);
+  
+    if(!isNaN(value) && value>= min && value <= max && !playerNumbers.includes(value)){
+      playerNumbers.push(value)
+    }
+  } 
+
+  if (playerNumbers.length !== totalNumbers){
+    countdown.classList.add('text-danger');
+    countdown.innerHTML = 'Attenzione! Inserisci 5 numeri diversi';
+    return;
+  }
+
+  const correctNumbers = [];
+  for (let i = 0; i < playerNumbers.length; i++){
+    const guess = playerNumbers[i];
+    if(randomNumbers.includes(guess)) correctNumbers.push(guess)
+  }
+
+  const guessString = correctAswers.join(' - ');
+
+  console.log(guessString)
+}
+
+form.addEventListener('submit', confirm)
+
+
+//bg-danger-subtle border-3 border-danger-subtle

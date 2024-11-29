@@ -84,7 +84,11 @@ form.addEventListener ('submit', (e) => {
   const correctNumbers = [];
   for (let i = 0; i < playerNumbers.length; i++){
     const guess = playerNumbers[i];
-    if(randomNumbers.includes(guess)) correctNumbers.push(guess)
+    if(randomNumbers.includes(guess)) {
+      correctNumbers.push(guess)
+      //imput.classList.add('bg-danger-subtle', 'border-3', 'border-danger-subtle')
+    }
+   
   }
 
   const guessString = correctNumbers.join(' - ');
@@ -105,7 +109,9 @@ form.addEventListener ('submit', (e) => {
     winner.innerHTML = 'HAI VINTO!';
     message.innerHTML = `Hai indovinato i seguenti numeri: ${guessString}`;
   }
+
+
 })
 
-
+//imput.classList.add('bg-danger-subtle', 'border-3', 'border-danger-subtle')
 //bg-danger-subtle border-3 border-danger-subtle

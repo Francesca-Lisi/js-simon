@@ -1,6 +1,15 @@
+h1{
+  font-family: Playwrite FR Moderne;
+}
+
 *{
   font-family: Sour Gummy;
 }
+
+/* body{
+  background-image: url(img/yellow-6168768_1280.webp);
+ 
+} */
 
 h1{
   font-size: 100px;

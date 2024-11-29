@@ -6,9 +6,12 @@ h1{
   font-size: 100px;
   font-weight: 900;
 }
+img{
+width: 100%;
+}
 
 div.row.border-salmon{
-  height: 360px;
+  height: 370px;
 }
 
 .border-green{
